@@ -1,0 +1,43 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# production
+/build
+
+# env — never commit secrets
+.env
+.env*.local
+.env.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# python leftovers (not part of the app)
+/venv
+__pycache__/
+*.pyc
+
+# editor / OS
+.DS_Store
+*.pem
+.idea/workspace.xml
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# AI
+CLAUDE.md
+.claude/

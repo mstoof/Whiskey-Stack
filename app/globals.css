@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cask-50: #fbf7f0;
+  --color-cask-100: #f3e8d5;
+  --color-cask-200: #e7cfa6;
+  --color-cask-300: #d9b071;
+  --color-cask-400: #cf974d;
+  --color-cask-500: #c17d34;
+  --color-cask-600: #a5602a;
+  --color-cask-700: #854726;
+  --color-cask-800: #6d3a25;
+  --color-cask-900: #5c3222;
+  --color-cask-950: #341910;
+
+  --color-night-800: #241a12;
+  --color-night-900: #1a120c;
+  --color-night-950: #120b07;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: ui-serif, Georgia, "Times New Roman", serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(193, 125, 52, 0.12), transparent 60%),
+    linear-gradient(180deg, var(--color-night-900), var(--color-night-950));
+  color: var(--color-cask-100);
+  font-family: var(--font-sans);
+}
+
+/* Neon Auth (Stack) renders inside our dark theme. Keep the card readable. */
+.stack-scope {
+  --stack-accent-color: var(--color-cask-400);
+}
