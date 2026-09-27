@@ -213,8 +213,8 @@ export function BottleForm({ initial, defaultStatus, onSaved, onCancel }: Props)
         </h2>
 
         <div className="mt-5 rounded-xl border border-dashed border-cask-700/60 bg-night-950/40 p-4">
-          <div className="flex items-center justify-between gap-3">
-            <div>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="min-w-0">
               <p className="text-sm font-medium text-cask-100">📷 Add by photo</p>
               <p className="text-xs text-cask-200/60">
                 Snap the label and let AI fill in the details. Check them before saving.

@@ -93,7 +93,7 @@ export function CollectionView({ initialBottles }: { initialBottles: BottleDTO[]
             {stats.avg != null ? ` · average rating ★ ${stats.avg}/100` : ""}
           </p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <CollectionIO bottles={bottles} onImported={mergeImported} />
           <button onClick={openAdd}
             className="rounded-lg bg-cask-500 px-4 py-2 text-sm font-semibold text-night-950 transition hover:bg-cask-400">

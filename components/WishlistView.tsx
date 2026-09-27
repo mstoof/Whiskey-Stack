@@ -180,7 +180,7 @@ export function WishlistView({ initialBottles }: { initialBottles: BottleDTO[] }
                 <span className="ml-auto text-sm text-cask-200/50">{collapsed[label] ? "▸" : "▾"}</span>
               </button>
               {!collapsed[label] && <div className="mt-4 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {group.map((b) => <BottleCard key={b.id} bottle={b} onEdit={openEdit} onDelete={onDelete} />)}
+                {group.map((b) => <BottleCard key={b.id} bottle={b} onEdit={openEdit} onDelete={onDelete} collapsible />)}
               </div>}
             </div>
           ))}
@@ -196,7 +196,7 @@ export function WishlistView({ initialBottles }: { initialBottles: BottleDTO[] }
               </button>
               {!collapsed[country] && <div className="mt-4 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {group.map((b) => (
-                  <BottleCard key={b.id} bottle={b} onEdit={openEdit} onDelete={onDelete} />
+                  <BottleCard key={b.id} bottle={b} onEdit={openEdit} onDelete={onDelete} collapsible />
                 ))}
               </div>}
             </div>

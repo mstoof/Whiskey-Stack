@@ -76,7 +76,7 @@ export function CollectionIO({
   }
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       <details className="relative">
         <summary className="cursor-pointer list-none rounded-lg border border-cask-800 px-4 py-2 text-sm text-cask-200 transition hover:border-cask-600 [&::-webkit-details-marker]:hidden">
           Export

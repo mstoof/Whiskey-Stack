@@ -28,6 +28,10 @@
 html,
 body {
   min-height: 100%;
+  /* Belt-and-braces: nothing on this site should ever scroll sideways. Guards
+     against any off-screen absolutely-positioned element (e.g. a hover
+     tooltip anchored near a card's edge) silently widening the page. */
+  overflow-x: hidden;
 }
 
 body {
