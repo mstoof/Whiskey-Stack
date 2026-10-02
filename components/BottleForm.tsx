@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { BottleDTO } from "@/lib/serialize";
 import { BOTTLE_STATUS_LABELS, BOTTLE_STATUSES, CATEGORIES, retailerNamesLabel, type BottleVision } from "@/lib/types";
 
@@ -75,6 +75,17 @@ export function BottleForm({ initial, defaultStatus, onSaved, onCancel }: Props)
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
+
+  // This modal is a fixed overlay, not a native <dialog>, so the page behind it
+  // doesn't stop scrolling on its own — on mobile that reads as two independent
+  // scrollable layers fighting each other. Lock body scroll while it's open.
+  useEffect(() => {
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, []);
 
   async function onPickPhoto(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
